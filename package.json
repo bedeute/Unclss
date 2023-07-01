@@ -1,0 +1,35 @@
+{
+  "name": "unclss",
+  "version": "0.5.0",
+  "description": "classless css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "run-p serve:*",
+    "serve:html": "npx serve",
+    "serve:css": "postcss src/*.css -d dist/ --watch",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-load-config": "^4.0.1",
+    "postcss-preset-env": "^8.5.1",
+    "rimraf": "^5.0.1",
+    "sanitize.css": "^13.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-preset-env": {},
+      "postcss-import": {},
+      "autoprefixer": {}
+    }
+  }
+}

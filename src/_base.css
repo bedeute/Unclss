@@ -1,0 +1,12 @@
+html {
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  background-color: var(--color-bg-page);
+  line-height: 1.58;
+  word-wrap: break-word;
+  color: var(--color-text-base);
+  background: var(--color-bg-page);
+  text-rendering: optimizeLegibility;
+}

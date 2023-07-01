@@ -1,0 +1,10 @@
+:root {
+  --color-bg-page: #f0f3f8;
+  --color-bg-general: #e3e7ee;
+  --color-main: hsla(350, 90%, 70%, 1);
+  --color-text-base: hsla(215, 25%, 15%, 1);
+
+  --font-family-serif: 'Noto Serif', Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-sans-serif: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-family-display: 'DM Serif Display', var(--font-family-serif);
+}
