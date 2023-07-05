@@ -1,10 +1,34 @@
 :root {
-  --color-bg-page: #f0f3f8;
-  --color-bg-general: #e3e7ee;
-  --color-main: hsla(350, 90%, 70%, 1);
-  --color-text-base: hsla(215, 25%, 15%, 1);
+  --color-bg-page: #fafeff;
+  --color-bg-base: #eff4f6;
+  --color-bg-prominent: color-mix(in srgb, var(--color-bg-base), var(--color-text-base) 8%);
+
+  --color-main: #e04c7d;
+
+  --color-text-dim: color-mix(in srgb, var(--color-text-base), var(--color-bg-page) 25%);;
+  --color-text-base: #50626f;
+  --color-text-heading: #384d5c;
+  
+  --color-border: color-mix(in srgb, var(--color-bg-base), var(--color-text-heading) 46%);
+  --color-border-dim: color-mix(in srgb, var(--color-bg-base), var(--color-text-heading) 14%);
+  --color-border-prominent: color-mix(in srgb, var(--color-bg-base), var(--color-text-heading) 62%);
+
 
   --font-family-serif: 'Noto Serif', Georgia, Cambria, "Times New Roman", Times, serif;
   --font-family-sans-serif: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --font-family-display: 'DM Serif Display', var(--font-family-serif);
+
+  --transition: 0.24s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-page: #2a1f41;
+    --color-bg-base: #231b3a;
+
+    /* --color-main: #e95e8c; */
+
+    --color-text-base: #c5b2c8;
+    --color-text-heading: #e7d6ee;
+  }
 }

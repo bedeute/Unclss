@@ -1,0 +1,26 @@
+button,
+[type='submit'],
+[type='reset'],
+[type='button'] {
+  appearance: button;
+  padding-right: 12px;
+  padding-left: 12px;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  box-shadow: none;
+  color: var(--color-text-base);
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.4;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-bg-base);
+    border-color: var(--color-border-prominent);
+  }
+}

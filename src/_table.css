@@ -1,0 +1,18 @@
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:nth-child(2n) {
+  background-color: var(--color-bg-base);
+}
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid var(--color-bg-base);
+}
+
+th {
+  border-color: var(--color-bg-prominent);
+}
