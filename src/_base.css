@@ -41,7 +41,7 @@ hr {
 
 
 
-ul {
+ul, ol {
   padding-left: 1.4em;
   margin-top: 0px;
   margin-bottom: 2.5rem;
@@ -56,8 +56,12 @@ img, video {
   height: auto;
   max-width: 100%;
   margin-top: 0px;
-  margin-bottom: 2.5rem;
   border-radius: 4px;
+  margin-bottom: 1rem;
+  
+  &:last-child {
+    margin-bottom: 2.5rem;
+  }
 }
 
 figure {
@@ -67,13 +71,11 @@ figure {
 
   img {
     display: block;
-    margin: 0 auto 10px;
   }
 
   figcaption {
-    text-align: center;
     font-size: 0.88em;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -81,6 +83,7 @@ figure {
   outline: 3px solid hsl(from var(--color-main) h s l / 0.4);
   outline-offset: 0;
   border-radius: 4px;
+  transition: outline var(--transition);
 }
 
 nav {
@@ -97,3 +100,34 @@ nav {
     }
   }
 }
+
+
+/* TODO: Restyle <details> <sumarry>  */
+details {
+  border: 1px solid var(--color-border-dim);
+  border-radius: var(--border-radius);
+  /* background-color: var(--color-bg-base); */
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  > summary {
+    padding: 0.6rem 0;
+
+    &:hover::marker {
+      color: var(--color-main);
+    }
+  }
+
+  &[open]> summary {
+    border-bottom: 1px solid var(--color-border-dim);
+    margin: 0 -1rem 0.6rem -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  > *:last-child {
+    margin-bottom: 0.6rem;
+  }
+}
+
+/* TODO: Add aside style */

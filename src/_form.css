@@ -11,24 +11,29 @@ select {
   background-color: inherit;
   font: inherit;
   margin-bottom: 10px;
-  padding: 6px 10px;
+  padding: 4px 10px;
   border-width: 1px;
   border-style: solid;
   border-color: var(--color-border);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   outline: none;
   box-shadow: inset 0px 1px 3px 0px var(--color-border-dim);
   transition: var(--transition);
-  transition-property: background-color,border,outline;
+  transition-property: background-color,border,color,transform;
   outline-color: transparent;
 
-  &:hover {
+  &:not([disabled]):hover {
     border-color: var(--color-border-prominent);
   }
 
   &:focus-visible {
     outline: 4px solid hsl(from var(--color-text-base) h s l / 0.12);
     border-color: var(--color-border-prominent);
+  }
+
+  > optgroup {
+    background-color: #eff4f6;
+    color: #384d5c;
   }
 }
 
@@ -53,7 +58,20 @@ input[type="range"] {
   box-shadow: none;
   padding: 2px 4px;
   cursor: pointer;
+  vertical-align: middle;
 }
+
+
+[type="range"],
+[type="color"] {
+  translate: 0 4px;
+}
+
+[type="range"] {
+  vertical-align: top;
+}
+
+
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -92,11 +110,10 @@ input[type="radio"] {
 }
 
 input:disabled {
-  box-shadow: none;
   background-color: var(--color-bg-prominent);
+  opacity: 0.6;
 
   &:hover {
-    border-color: var(--color-border);
   }
 }
 
@@ -115,12 +132,6 @@ select {
 
   &::-ms-expand { display: none };
 }
-
-
-input[type="range"] {
-  vertical-align: sub;
-}
-
 
 ::placeholder {
   color: var(--color-text-heading);
@@ -142,4 +153,18 @@ legend {
   font-size: 0.9em;
   font-weight: 600;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  input,
+  button,
+  textarea,
+  select {
+    --color-border-dim: color-mix(in srgb, var(--color-bg-base), black 50%);
+    /* box-shadow: inset 0px 1px 3px 1px var(--color-bg-base); */
+
+    &:focus-visible {
+      outline: 4px solid hsl(from var(--color-main) h s l / 0.18);
+    }
+  }
 }
