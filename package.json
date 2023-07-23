@@ -1,5 +1,8 @@
+// TODO
+  // [ ] Change name to SimpliCSS
+  // [ ] add semver
 {
-  "name": "unclss",
+  "name": "unclss", 
   "version": "0.5.0",
   "description": "classless css",
   "main": "index.js",
@@ -11,10 +14,17 @@
     "clean": "rimraf dist"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bedeute/Unclss.git"
+  },
+  "author": {
+    "name": "bedeute",
+    "email": "bedeute@gmail.com",
+    "url": "https://twitter.com/bedeute"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "@csstools/postcss-relative-color-syntax": "^1.0.2",
     "autoprefixer": "^10.4.14",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.1.5",
